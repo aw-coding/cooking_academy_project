@@ -18,3 +18,19 @@ def select(id):
     if result is not None:
         lesson = Lesson(result['name'], result['id'])
     return lesson
+
+
+def select_all():
+    lessons = []
+    sql = 'SELECT * FROM lessons'
+    results = run_sql(sql)
+    for row in results:
+        lesson = Lesson(row['name'], row['id'])
+        lessons.append(lesson)
+    return lessons
+
+
+def update(lesson):
+    sql = 'UPDATE lessons SET (name, id) = (%s, %s) WHERE id = %s'
+    values =[lesson.name, lesson.id]
+    run_sql(sql, values)

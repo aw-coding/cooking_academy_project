@@ -1,8 +1,12 @@
 from flask import Flask, render_template
+from controllers.member_controller import members_blueprint
 
 
 cooking_academy = Flask(__name__)
 
+
+
+cooking_academy.register_blueprint(members_blueprint)
 
 @cooking_academy.route('/')
 def home():

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Members</h1>
+
+
+    <h1>Name 1</h1>
+  {% for member in all_members %}
+  <!-- {% print(member.name) %} -->
+<p><a href="/members/{{ member.id }}"> {{member.name}} </a></p>
+  {% endfor %}
+</table>
+{% endblock %}
