@@ -1,0 +1,2 @@
+FLASK_APP=cooking_academy.py
+FLASK_ENV=development
