@@ -34,3 +34,19 @@ def update(lesson):
     sql = 'UPDATE lessons SET (name, id) = (%s, %s) WHERE id = %s'
     values =[lesson.name, lesson.id]
     run_sql(sql, values)
+
+
+# def members(lesson):
+#     members = []
+#     sql =
+#I was rewriting the lower function to work for member(lesson). But is this needed?
+
+# def lessons(user):
+#     lessons = []
+#     sql = 'SELECT lessons.* FROM lessons INNER JOIN bookings ON bookings.lesson_id = locations.id WHERE bookings.member_id = %s'
+#     values = user.id 
+#     results = run_sql(sql, values)
+#     for row in results:
+#         lesson = lesson(row['name'], row['id'])
+#         lessons.append(lesson)
+#     return lessons

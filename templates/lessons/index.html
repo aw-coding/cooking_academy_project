@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Lessons</h1>
+
+
+    <h1>Name 1</h1>
+  {% for lesson in all_lessons %}
+<p><a href="/lessons/{{ lesson.id }}"> {{lesson.name}} </a></p>
+  {% endfor %}
+</table>
+{% endblock %}
