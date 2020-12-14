@@ -34,3 +34,10 @@ def create_booking():
     new_booking = Booking(member, lesson)
     booking_repository.save(new_booking)
     return redirect("/bookings")
+
+
+@bookings_blueprint.route('/bookings/<id>')
+def show(id):
+    booking = booking_repository.select(id)
+    #lessons = member_repository.lessons(member)
+    return render_template("bookings/show.html", booking = booking)

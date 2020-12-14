@@ -13,13 +13,22 @@ def save(booking):
     booking.id = results[0]['id']
     return booking
 
-
+def select(id):
+    sql = 'SELECT * FROM bookings WHERE id = %s'
+    values = [id]
+    result = run_sql(sql, values)[0]
+    member = member_repository.select(result['member_id'])
+    lesson = lesson_repository.select(result['lesson_id'])
+    booking = Booking(member, lesson, result['id'])
+    return booking
 
 def select_all():
     bookings = []
     sql = 'SELECT * FROM bookings'
     results = run_sql(sql)
     for row in results:
-        booking = Booking(row['id'], row['lesson.id'], row['member.id'])
+        member = member_repository.select(row["member_id"])
+        lesson = lesson_repository.select(row['lesson_id'])
+        booking = Booking(member, lesson, row['id'])
         bookings.append(booking)
     return bookings
