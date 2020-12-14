@@ -4,6 +4,7 @@ import repositories.booking_repository as booking_repository
 from models.member import Member
 from models.lesson import Lesson
 from models.booking import Booking
+import pdb
 
 
 member_1 = Member('John Smith')
@@ -17,4 +18,9 @@ lesson_repository.save(lesson_1)
 
 booking_1 = Booking(member_1, lesson_1)
 booking_repository.save(booking_1)
+
+#pdb.set_trace
+
+member_1 = Member('Update John Smith')
+member_repository.update(member_1)
 
