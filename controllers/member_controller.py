@@ -34,6 +34,8 @@ def members():
     members = member_repository.select_all()
     return render_template('members/index.html', all_members = members) #members/index is the homepage for members.
 
+
+#SHOW LESSON BOOKINGS FOR MEMBER
 @members_blueprint.route('/members/<id>')
 def show(id):
     member = member_repository.select(id)
@@ -52,3 +54,13 @@ def update_member(id):
     member = Member(name, id)
     member_repository.update(member)
     return redirect('/members')
+
+
+
+#CREATE BOOKING FOR MEMBER
+
+# @members_blueprint.route('/members/<id>/create_booking', methods = ['POST'])
+# def create_booking_for_member(id):
+#     booking = None
+#     lesson = lesson 
+#     booking = Booking(member.id, lesson.id, id)

@@ -48,9 +48,9 @@ def update(member):
 def lessons(member):
     lessons = []
     sql = 'SELECT lessons.* FROM lessons INNER JOIN bookings ON bookings.lesson_id = lessons.id WHERE bookings.member_id = %s'
-    values = member.id 
+    values = [member.id] 
     results = run_sql(sql, values)
     for row in results:
-        lesson = lesson(row['name'], row['id'])
+        lesson = Lesson(row['name'], row['id'])
         lessons.append(lesson)
     return lessons
