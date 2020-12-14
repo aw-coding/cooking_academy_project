@@ -2,14 +2,12 @@
 
 {% block content %}
 
-<form action="/bookings" method="post">
+<form action="/lessons" method="post">
     <div>
-      <label for="member_id">Member ID:</label>
-      <input type="text" id="member_id" name="member_id" placeholder="member_id" required autofocus>
-      <label for="lesson_id">Lesson ID:</label>
-      <input type="text" id="lesson_id" name="lesson_id" placeholder="lesson_id" required autofocus>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="name" required autofocus>
     </div>
-    <button type="submit">Add Booking</button>
+    <button type="submit">Add Lesson</button>
   </form>
 
 {% endblock %}
