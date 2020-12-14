@@ -5,4 +5,11 @@
 
 <h2>Lesson name: {{lesson.name}}</h2>
 
+<h3>Booked places:</h3>
+<ul>
+    {% for member in members %}
+    <li>{{member.name}}</li>
+    {% endfor %}
+</ul>
+
 {% endblock %}

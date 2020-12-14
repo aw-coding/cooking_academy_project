@@ -35,6 +35,7 @@ def lessons():
     return render_template('lessons/index.html', all_lessons = lessons) #lessons/index is the homepage for lessons.
 
 
+#SHOW MEMBERS BOOKED ON LESSON
 @lessons_blueprint.route('/lessons/<id>')
 def show(id):
     lesson = lesson_repository.select(id)
@@ -42,10 +43,16 @@ def show(id):
     return render_template("lessons/show.html", lesson=lesson, members = members)
 
 
+
+
+
 @lessons_blueprint.route('/lessons/<id>/edit')
 def edit_lesson(id):
     lesson = lesson_repository.select(id)
     return render_template("lessons/edit.html", lesson = lesson)
+
+
+    
 
 @lessons_blueprint.route('/lessons/<id>', methods = ['POST'])
 def update_lesson(id):

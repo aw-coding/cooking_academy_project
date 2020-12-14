@@ -1,5 +1,6 @@
 from db.run_sql import run_sql
 from models.lesson import Lesson
+from models.member import Member
 
 
 def save(lesson):
@@ -38,11 +39,11 @@ def update(lesson):
 
 def members(lesson):
     members = []
-    sql = 'SELECT members.* FROM members INNER JOIN bookings on bookings.member_id = lessons.id WHERE bookings.lesson_id = %s'
-    values = lesson.id
+    sql = 'SELECT members.* FROM members INNER JOIN bookings on bookings.member_id = members.id WHERE bookings.lesson_id = %s'
+    values = [lesson.id]
     results = run_sql(sql, values)
     for row in results:
-        member = member(row['name'], row['id'])
+        member = Member(row['name'], row['id'])
         members.append(member)
     return members
 

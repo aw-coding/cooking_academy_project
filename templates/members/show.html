@@ -5,4 +5,11 @@
 
 <h2>Name: {{member.name}}</h2>
 
+<h3>Booked lessons:</h3>
+<ul>
+    {% for lesson in lesson %}
+    <li>{{lesson.name}}</li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
