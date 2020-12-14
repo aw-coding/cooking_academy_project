@@ -31,7 +31,7 @@ def select_all():
 
 
 def update(lesson):
-    sql = 'UPDATE lessons SET (name, id) = (%s) WHERE id = %s'
+    sql = 'UPDATE lessons SET name = %s WHERE id = %s'
     values =[lesson.name, lesson.id]
     run_sql(sql, values)
 

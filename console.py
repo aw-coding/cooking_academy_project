@@ -21,6 +21,6 @@ booking_repository.save(booking_1)
 
 #pdb.set_trace
 
-member_1 = Member('Update John Smith')
+member_1.name = 'John\'s new name 443'
 member_repository.update(member_1)
 

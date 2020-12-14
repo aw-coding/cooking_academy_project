@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, request, redirect
+from flask import render_template, Blueprint, request, redirect, Flask
 from models.member import Member
 import repositories.member_repository as member_repository
 import repositories.lesson_repository as lesson_repository
@@ -43,10 +43,10 @@ def show(id):
 
 @members_blueprint.route('/members/<id>/edit')
 def edit_member(id):
-    member = member_repository.update(id)
-    return render_template("members/<id>", member = member)
+    member = member_repository.select(id)
+    return render_template("members/edit.html", member = member)
 
-@members_blueprint.route('/members/<edit>', methods = ['POST'])
+@members_blueprint.route('/members/<id>', methods = ['POST'])
 def update_member(id):
     name = request.form['name']
     member = Member(name, id)

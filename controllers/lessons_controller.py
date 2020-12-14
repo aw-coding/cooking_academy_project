@@ -40,3 +40,16 @@ def show(id):
     lesson = lesson_repository.select(id)
     members = lesson_repository.members(lesson)
     return render_template("lessons/show.html", lesson=lesson, members = members)
+
+
+@lessons_blueprint.route('/lessons/<id>/edit')
+def edit_lesson(id):
+    lesson = lesson_repository.select(id)
+    return render_template("lessons/edit.html", lesson = lesson)
+
+@lessons_blueprint.route('/lessons/<id>', methods = ['POST'])
+def update_lesson(id):
+    name = request.form['name']
+    lesson = Lesson(name, id)
+    lesson_repository.update(lesson)
+    return redirect('/lessons')

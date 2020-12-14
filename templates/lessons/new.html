@@ -2,31 +2,14 @@
 
 {% block content %}
 
-<form action="/lessons" method="post">
+<form action="/bookings" method="post">
     <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="name" required autofocus>
+      <label for="member_id">Member ID:</label>
+      <input type="text" id="member_id" name="member_id" placeholder="member_id" required autofocus>
+      <label for="lesson_id">Lesson ID:</label>
+      <input type="text" id="lesson_id" name="lesson_id" placeholder="lesson_id" required autofocus>
     </div>
-    <!-- <div>
-      <label for="duration">Duration:</label>
-      <input type="number" id="duration" name="duration" placeholder="Duration" required>
-    </div>
-    <div>
-      <label for="completed">Completed:</label>
-      <select id="completed" name="completed">
-        <option value="true">True</option>
-        <option value="false">False</option>
-      </select>
-    </div>
-    <div> -->
-      <!-- <label for="user">User:</label>
-      <select id="user" name="user_id">
-        {% for user in all_users %}
-        <option value="{{ user.id }}">{{ user.first_name }}</option>
-        {% endfor %}
-      </select> -->
-    <!-- </div> -->
-    <button type="submit">Add Lesson</button>
+    <button type="submit">Add Booking</button>
   </form>
 
 {% endblock %}
