@@ -39,10 +39,10 @@ def update(member):
     run_sql(sql, values)
 
 
-def lessons(user):
+def lessons(member):
     lessons = []
-    sql = 'SELECT lessons.* FROM lessons INNER JOIN bookings ON bookings.lesson_id = locations.id WHERE bookings.member_id = %s'
-    values = user.id 
+    sql = 'SELECT lessons.* FROM lessons INNER JOIN bookings ON bookings.lesson_id = lessons.id WHERE bookings.member_id = %s'
+    values = member.id 
     results = run_sql(sql, values)
     for row in results:
         lesson = lesson(row['name'], row['id'])

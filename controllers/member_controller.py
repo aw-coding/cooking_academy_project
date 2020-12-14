@@ -38,4 +38,4 @@ def members():
 def show(id):
     member = member_repository.select(id)
     lessons = member_repository.lessons(member)
-    return render_template("members/show.html", memberr=member, lessons = lessons)
+    return render_template("members/show.html", member=member, lessons = lessons)
