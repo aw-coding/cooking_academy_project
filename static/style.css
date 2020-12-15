@@ -4,6 +4,7 @@ body {
     background-image: url('kitchen_background_edited2.png');
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
@@ -29,15 +30,57 @@ body > h1 {
     justify-content: center;
 }
 
-.text_centre {
-    display: flex;
-    justify-content: center;
+.grid-container {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-areas: 
+    'header header header'
+    'header_text header_text'
+    'top_left top_right'
+    'bottom_left bottom_right';
 }
 
 
-body > div > h2 {
+.header {
+    text-align: center;
+}
+
+.header_text {
+    padding-top: 50px;
+    text-align: center
+}
+
+.top_left{
+    grid-area: top left;
+}
+
+.bottom_right{
+    grid-area: bottom right;
+}
+
+/* body > div > h2 {
     padding-top: 30px;
     padding-right: 40px;
     display: flex;
     justify-content: space-around;
 }
+
+
+body > div > section {
+    padding-top: 400px; */
+
+}
+
+
+/* 
+#gallery > section {
+    display: grid;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+#gallery > section >img {
+    grid-column-start: 1;
+    grid-row-start: 1;
+} */

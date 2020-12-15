@@ -2,12 +2,24 @@
 
 {% block content %}
 
-<h2>Welcome to the Cooking Academy Management Platform (CAMP)!</h2>
-<div class ='text_centre'>
-    <h3><p>This software can be used to manage the Cooking Academy.</p>
+
+<div class ='grid-container'>
+    <div class = 'header'>
+    <h2>Welcome to the Cooking Academy Management Platform (CAMP)!</h2>
+    </div>
+    <h3 class="header_text" ><p>This software can be used to manage the Cooking Academy.</p>
         <p>Use it to create new memberships and cooking lessons.</p>
         <p>It can also be used to edit the details of both our members and the lessons we offer.</p>
-        <p>Of equal importance is the ability to book members on classes.</p></h3>
+        <p>Of equal importance is the ability to book members on classes.</p>
+    </h3>
+
+    <section id='home_gallery'>
+        <img class ="top_left" src='static/images/bread.jpg' style="width: 28vw; min-width: 200px;" alt='random cooking photo'>
+        <img class ="top_right" src='static/images/cupcakes.jpg' style="width: 28vw; min-width: 200px;" alt='random cooking photo'>
+        <img class ="bottom_left" src='static/images/peppers.jpg' style="width: 28vw; min-width: 200px;" alt='random cooking photo'>
+        <img class ="bottom_right" src='static/images/sushi_chef.jpg' style="width: 28vw; min-width: 200px;" alt='random cooking photo'>
+
+    </section>
 </div>
 {% endblock %}
 
