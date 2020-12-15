@@ -10,15 +10,19 @@
 
 </head>
 <body>
-    <h1>Cooking Academy- Management</h1>
-    <p><a href = "/members">Members</a></p>
-    <p><a href = "/lessons">Lessons</a></p>
-    <p><a href = "/bookings">Bookings</a></p>
-
+    <header>
+        <h1>Cooking Academy- Management</h1>
+        <ul>
+            <li><a href = "/members">Members</a></li>
+            <li><a href = "/lessons">Lessons</a></li>
+            <li><a href = "/bookings">Bookings</a></li>
+        </ul>
+    </header>
+    <body>
     <div>
         {% block content %}
         {% endblock %}
     </div>
-    
+    </body>
 </body>
 </html>
