@@ -45,14 +45,30 @@ body > h1 {
 }
 
 .header_text {
-    padding-top: 10px;
     text-align: center
 }
 
 
 .gallery {
+    padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around ;
+    
+}
+
+footer {
+    background-color: rgb(140, 154, 154);
+    font-size: medium;
+    /* position: fixed; */
+    /* bottom: 100; */
+    clear:both;
+    position: relative;
+    margin-top: -1000px;
+    /* position: absolute;
+    bottom: 0;
+    height: 25px;
+    width: 100%; */
 }
 
 /* body > div > h2 {
