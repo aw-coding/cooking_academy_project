@@ -47,3 +47,8 @@ def members(lesson):
         members.append(member)
     return members
 
+
+def delete_all():
+    sql = "DELETE FROM lessons"
+    run_sql(sql)
+

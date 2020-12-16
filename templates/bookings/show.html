@@ -2,8 +2,25 @@
 
 {% block content %}
 
-<h2>Booking id: {{booking.id}}</h2>
-<h2>Lesson id: {{booking.lesson.id}}</h2>
-<h2>Member id: {{booking.member.id}}</h2>
+<div class="show_flex_container">
+<p class="attribute_name">Booking id: </p>
+<p class="attribute_value">{{booking.id}}</p>
+</div>
+
+<div class="show_flex_container">
+<p class="attribute_name">Lesson id: </p>
+<p class="attribute_value">{{booking.lesson.id}}</p>
+</div>
+
+<div class="show_flex_container">
+<p class="attribute_name">Member id: </p>
+<p class="attribute_value">{{booking.member.id}}</p>
+</div>
+
+
+
+
+
+</div>
 
 {% endblock %}

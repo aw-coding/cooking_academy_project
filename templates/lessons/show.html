@@ -1,15 +1,18 @@
+
+
 {% extends 'base.html' %}
 
 {% block content %}
-
-
-<h2>Lesson name: {{lesson.name}}</h2>
-
-<h3>Booked places:</h3>
+<div class="show_flex_container">
+<h3 class = "attribute_name" >Booked on this lesson: </h3>
 <ul>
     {% for member in members %}
-    <li>{{member.name}}</li>
+    <li class="attribute_list">{{member.name}}</li>
     {% endfor %}
 </ul>
+</div>
+
+<p class="edit_link"><a href = "/lessons/{{lesson.id}}/edit">Edit Lesson Details</a></p>
+
 
 {% endblock %}

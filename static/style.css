@@ -94,7 +94,9 @@ body > div > section {
 }
 
 .create_new {
-    margin-left: 100px;
+    margin-right: 100px;
+    text-align: right;
+    margin-top: -20px;
 }
 
 .list_of_entries {
@@ -102,15 +104,30 @@ body > div > section {
 }
 
 
-/* 
-#gallery > section {
-    display: grid;
-    grid-template-rows: 1fr, 1fr;
-    grid-template-columns: 1fr 1fr;
+.show_flex_container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.attribute_name {
+    text-decoration: underline;
+}
+
+.attribute_value {
+    margin-left: 130px;
+    font-size: medium;
 
 }
 
-#gallery > section >img {
-    grid-column-start: 1;
-    grid-row-start: 1;
-} */
+.attribute_list {
+    margin-top: 8px;
+    list-style-type: none;
+
+}
+
+.edit_link {
+    margin-top: 125px;
+    margin-left: 100px;
+}

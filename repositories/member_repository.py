@@ -54,3 +54,8 @@ def lessons(member):
         lesson = Lesson(row['name'], row['id'])
         lessons.append(lesson)
     return lessons
+
+
+def delete_all():
+    sql = "DELETE FROM members"
+    run_sql(sql)

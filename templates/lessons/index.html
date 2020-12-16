@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Lessons</h1>
+<h2 class="headings">Lessons</h2>
 
-<p><a href='/lessons/new'>Create a new lesson</a></p>
+<p class="create_new"><a href='/lessons/new'>Create a new lesson</a></p>
 
-    <h1>Name 1</h1>
   {% for lesson in all_lessons %}
-<p><a href="/lessons/{{ lesson.id }}"> {{lesson.name}} </a></p>
+<p class="list_of_entries"><a href="/lessons/{{ lesson.id }}"> {{lesson.name}} </a></p>
   {% endfor %}
 </table>
 {% endblock %}

@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Bookings</h1>
-<p><a href ="/bookings/new">Create new booking</a></p>
+<h2 class="headings">Bookings</h2>
+<p class="create_new"><a href ="/bookings/new">Create new booking</a></p>
 
-    <h1>All bookings</h1>
   {% for booking in bookings %}
-<p><a href="/bookings/{{ booking.id }}"> Booking ID: {{booking.id}} </a></p>
+<p class="list_of_entries"><a href="/bookings/{{ booking.id }}"> Booking ID: {{booking.id}} </a></p>
   {% endfor %}
 </table>
 {% endblock %}
