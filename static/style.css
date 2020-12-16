@@ -9,10 +9,7 @@ body {
 
 }
 
-header {   
 
-
-}
 
 body > header > h1 {
     display: flex;
@@ -58,26 +55,8 @@ body > h1 {
     
 }
 
-footer {
-    background-color: rgb(140, 154, 154);
-    font-size: medium;
-    /* position: fixed; */
-    /* bottom: 100; */
-    clear:both;
-    position: relative;
-    margin-top: -1000px;
-    /* position: absolute;
-    bottom: 0;
-    height: 25px;
-    width: 100%; */
-}
 
-/* body > div > h2 {
-    padding-top: 30px;
-    padding-right: 40px;
-    display: flex;
-    justify-content: space-around;
-}*/
+
 
 
 body > div > section {
@@ -100,7 +79,7 @@ body > div > section {
 }
 
 .create_new {
-    margin-right: 100px;
+    margin-right: 250px;
     text-align: right;
     margin-top: -20px;
 }
@@ -134,7 +113,7 @@ body > div > section {
 
 .booking_attribute_value {
     position: absolute;
-    left: 250px;
+    left: 255px;
     padding-top: 5px;
 }
 

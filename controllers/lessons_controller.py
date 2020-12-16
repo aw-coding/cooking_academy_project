@@ -32,7 +32,8 @@ def lessons():
 def show(id):
     lesson = lesson_repository.select(id)
     members = lesson_repository.members(lesson)
-    return render_template("lessons/show.html", lesson=lesson, members = members)
+    member_number = len(lesson_repository.members(lesson))
+    return render_template("lessons/show.html", lesson=lesson, members = members, member_number = member_number)
 
 
 
