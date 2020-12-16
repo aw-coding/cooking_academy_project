@@ -17,6 +17,7 @@ header {
 body > header > h1 {
     display: flex;
     justify-content: center;
+    text-decoration: underline;
 }
 
 body > header > ul {
@@ -85,6 +86,20 @@ body > div > section {
     justify-content: center;
 
 } 
+
+
+.headings {
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.create_new {
+    margin-left: 100px;
+}
+
+.list_of_entries {
+    margin-left: 100px;
+}
 
 
 /* 

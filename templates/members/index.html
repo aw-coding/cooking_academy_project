@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Members</h1>
+<h1 class="headings">Full List of Current Members</h1>
 
-<p><a href ='members/new'>Create a new member</a></p>
+<p class="create_new"><a href ='members/new'>Click here to create a new member</a></p>
 
     <h1>Name 1</h1>
   {% for member in all_members %}
   <!-- {% print(member.name) %} -->
-<p><a href="/members/{{ member.id }}"> {{member.name}} </a></p>
+<p class="list_of_entries"><a href="/members/{{ member.id }}"> {{member.name}} </a></p>
   {% endfor %}
 </table>
 {% endblock %}
