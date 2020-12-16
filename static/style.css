@@ -132,6 +132,12 @@ body > div > section {
 
 }
 
+.booking_attribute_value {
+    position: absolute;
+    left: 250px;
+    padding-top: 5px;
+}
+
 .attribute_list {
     margin-top: 8px;
     list-style-type: none;
