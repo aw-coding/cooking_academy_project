@@ -3,11 +3,11 @@
 
 {% block content %}
 
-<h2>Add a new booking</h2>
+<h3 class="headings_for_edits">Add a new booking</h3>
 
 <form action="/bookings" method="POST">
     <div>
-        <label for="member">Member:</label>
+        <label class="list_of_entries" for="member">Member:</label>
         <select name="member_id" id="member">
             {% for member in members %}
             <option value="{{ member.id }}">
@@ -17,7 +17,7 @@
         </select>
     </div>
     <div>
-        <label for="lesson">Lesson:</label>
+        <label class="list_of_entries" for="lesson">Lesson:</label>
         <select name="lesson_id" id="lesson">
             {% for lesson in lessons %}
             <option value="{{ lesson.id }}">
@@ -27,8 +27,10 @@
         </select>
     </div>
     <div>
-        <input type="submit">
+        <!-- <input class="add_button" type="submit"> -->
     </div>
+    <button class="add_button" type="submit">Add Booking</button>
+
 </form>
 
 {% endblock %}

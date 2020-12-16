@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>Update Lesson Details</h1>
+<h3 class="headings_for_edits">Update Lesson Details</h3>
 <form action ="/lessons/{{ lesson.id }}" method="POST">
 <div>
-    <label for ="name">Name:</label>
+    <label class="list_of_entries" for ="name">Name:</label>
     <input type = "text" id = "name" name = "name" value = "{{lesson.name}}">
     <input type = "submit">
 </div>

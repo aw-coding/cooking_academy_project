@@ -2,12 +2,15 @@
 
 {% block content %}
 
+
+<h3 class ="headings_for_edits">Create New Member</h3>
+
 <form action="/members" method="post">
     <div>
-      <label class="create_new" for="name">Name:</label>
+      <label class="list_of_entries" for="name">Name:</label>
       <input class="create_new" type="text" id="name" name="name" placeholder="name" required autofocus>
     </div>
-    <button class="create_new" type="submit">Add Member</button>
+    <button class="add_button" type="submit">Add Member</button>
   </form>
 
 {% endblock %}

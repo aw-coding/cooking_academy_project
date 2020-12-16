@@ -93,6 +93,12 @@ body > div > section {
     margin-left: 100px;
 }
 
+.headings_for_edits {
+    margin-top: 40px;
+    margin-left: 100px;
+    text-decoration: underline;
+}
+
 .create_new {
     margin-right: 100px;
     text-align: right;
@@ -101,6 +107,11 @@ body > div > section {
 
 .list_of_entries {
     margin-left: 100px;
+}
+
+.add_button {
+    margin-left: 210px;
+    margin-top: 20px;
 }
 
 
