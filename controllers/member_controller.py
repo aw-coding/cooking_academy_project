@@ -12,19 +12,11 @@ def new_member():
     members = member_repository.select_all()
     return render_template('members/new.html', all_members = members)
 
-@members_blueprint.route('/members', methods = ['POST']) #without this ['post'] request, it will be a default 'get' request
+@members_blueprint.route('/members', methods = ['POST']) 
 def create_member():
-    #gather all the data from the form, 
-    name = request.form['name'] #this is a dictionary, and these .form things relate to the save function in task_repository. the name value becomes a key in this dictionary
-    #id    = request.form['id']       #the form this corresponds to is at the top of the tasks/new.htnl
-          #form data is sent from the browser (html file) to be processed here, in the tasks_controller
-    #then select a user object from the database
-          #u = user_repository.select(user_id)
-    # then create a new task object
+    name = request.form['name'] 
     member = Member(name)
-    # save the task to the database
     member_repository.save(member)
-    # redirect to the INDEX
     return redirect('/members') #returns the browser to the index route
 
 
@@ -56,11 +48,3 @@ def update_member(id):
     return redirect('/members')
 
 
-
-#CREATE BOOKING FOR MEMBER
-
-# @members_blueprint.route('/members/<id>/create_booking', methods = ['POST'])
-# def create_booking_for_member(id):
-#     booking = None
-#     lesson = lesson 
-#     booking = Booking(member.id, lesson.id, id)

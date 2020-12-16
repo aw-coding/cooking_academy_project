@@ -14,18 +14,10 @@ def new_lesson():
 
 @lessons_blueprint.route('/lessons', methods = ['POST']) #without this ['post'] request, it will be a default 'get' request
 def create_lesson():
-    #gather all the data from the form, 
-    name = request.form['name'] #this is a dictionary, and these .form things relate to the save function in task_repository. the name value becomes a key in this dictionary
-    #id    = request.form['id']       #the form this corresponds to is at the top of the tasks/new.htnl
-          #form data is sent from the browser (html file) to be processed here, in the tasks_controller
-    #then select a user object from the database
-          #u = user_repository.select(user_id)
-    # then create a new task object
+    name = request.form['name'] 
     lesson = Lesson(name)
-    # save the task to the database
     lesson_repository.save(lesson)
-    # redirect to the INDEX
-    return redirect('/lessons') #returns the browser to the index route
+    return redirect('/lessons') 
 
 
 

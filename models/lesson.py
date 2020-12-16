@@ -1,4 +1,5 @@
 class Lesson:
-    def __init__(self, name, id = None):
+    def __init__(self, name, capacity, id = None):
         self.name = name 
+        self.capacity = capacity
         self.id = id
